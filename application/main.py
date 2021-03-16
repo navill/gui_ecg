@@ -6,17 +6,6 @@ from serial_handler.async_timer import UARTReceiver
 from serial_handler.port_handler import get_valid_comport
 
 
-# q = deque([0 for _ in range(1000)], maxlen=1000)
-# comport = get_valid_comport()
-#
-# uart_receiver = UARTReceiver(timeout=3, port=comport, queue=q)
-# gui_drawer = GUIDrawer(queue=q)
-#
-# t = threading.Thread(target=uart_receiver.get_data, daemon=True)
-# t.start()
-# gui_drawer.do_process()
-#
-
 class MainProcessor:
     def __init__(self):
         self.queue = deque([0 for _ in range(1000)], maxlen=1000)
