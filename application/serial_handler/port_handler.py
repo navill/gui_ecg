@@ -16,7 +16,7 @@ def check_os():
         return 'win'
 
 
-def get_comport_list() -> str:
+def get_valid_comport() -> str:
     os_flag = check_os()
     comport_set = list_ports.comports()
     for comport in comport_set:
